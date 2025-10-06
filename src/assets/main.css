@@ -1,0 +1,82 @@
+
+@import './base.css';
+
+
+body {
+  background: #f8f9fa;
+  position: relative;
+}
+
+#bg-img {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  filter: blur(0px) saturate(0.8) brightness(0.9);
+  pointer-events: none;
+}
+
+#bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.5);
+  z-index: -1;
+  pointer-events: none;
+}
+
+#app::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: inherit;
+  filter: blur(8px) saturate(0.7) brightness(0.9);
+  pointer-events: none;
+}
+
+/* Sobrescribir primary por info */
+.bg-primary,
+.btn-primary,
+.badge.bg-primary,
+.text-bg-primary {
+  background-color: var(--bs-info) !important;
+  border-color: var(--bs-info) !important;
+  color: #212529 !important;
+}
+
+.text-primary {
+  color: var(--bs-info) !important;
+}
+
+.border-primary {
+  border-color: var(--bs-info) !important;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  #app {
+    padding: 0 2rem;
+  }
+}
