@@ -1,4 +1,5 @@
 <template>
+  <!-- Componente de navegación paginada -->
   <nav>
     <ul class="pagination justify-content-center">
       <li class="page-item" :class="{ disabled: currentPage === 1 }">

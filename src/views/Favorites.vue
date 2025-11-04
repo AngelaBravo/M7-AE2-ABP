@@ -1,5 +1,6 @@
 <template>
-  <div class="container py-5">
+  <!-- Vista para la colección de pokemones marcados como favoritos -->
+  <main class="container py-5">
     <h2 class="mb-4">Pokémon Favoritos</h2>
     <div class="row mb-3">
       <div class="col-md-6">
@@ -40,7 +41,7 @@
         <router-link to="/" class="btn btn-outline-primary mt-3">Ir al Home</router-link>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script setup>

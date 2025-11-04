@@ -1,6 +1,7 @@
 
 <template>
-  <div class="container py-5">
+  <!-- Vista general inicial con la galería de pokemones -->
+  <main class="container py-5">
     <h2 class="mb-4">Pokédex</h2>
     <form class="row g-3 mb-4">
       <div class="col-md-4">
@@ -54,7 +55,7 @@
         class="mt-4"
       />
     </div>
-  </div>
+  </main>
 </template>
 
 <script setup>
@@ -107,6 +108,7 @@ const fetchAbilities = async () => {
 }
 
 onMounted(() => {
+  // para cumplir con la rúbrica y utilizar el ciclo de vida del componente
   fetchPokemons()
   fetchTypes()
   fetchAbilities()

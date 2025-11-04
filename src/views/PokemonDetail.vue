@@ -1,5 +1,6 @@
 <template>
-  <div class="container py-5" v-if="!loading && pokemon">
+  <!-- Vista con la página de detalle de un pokemon -->
+  <article class="container py-5" v-if="!loading && pokemon">
     <div class="row align-items-center">
       <div class="col-md-4 text-center mb-4 mb-md-0">
         <img :src="pokemon.image" :alt="pokemon.name" class="img-fluid" style="max-width: 250px;">
@@ -24,16 +25,16 @@
         <router-link to="/" class="btn btn-outline-primary mt-3">Volver</router-link>
       </div>
     </div>
-  </div>
-  <div v-else-if="loading" class="text-center py-5">
+  </article>
+  <article v-else-if="loading" class="text-center py-5">
     <div class="spinner-border text-primary" role="status">
       <span class="visually-hidden">Cargando...</span>
     </div>
-  </div>
-  <div v-else class="container py-5 text-center">
+  </article>
+  <article v-else class="container py-5 text-center">
     <h3>No se encontró el Pokémon</h3>
     <router-link to="/" class="btn btn-outline-primary mt-3">Volver</router-link>
-  </div>
+  </article>
 </template>
 
 <script setup>
@@ -74,3 +75,28 @@ watch(() => route.params.id, (newId) => {
   fetchPokemon(newId)
 })
 </script>
+
+<style scoped>
+.container {
+  background-color: rgba(231, 255, 216, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333 !important;
+}
+
+.container h2, 
+.container p, 
+.container strong, 
+.container li {
+  color: #333 !important;
+}
+
+.container h3 {
+  color: #333 !important;
+}
+
+/* Ensure text is readable */
+.text-capitalize {
+  color: #333 !important;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="card h-100 shadow-sm">
+  <article class="card h-100 shadow-sm">
     <img :src="image" class="card-img-top bg-light" :alt="name" style="object-fit:contain; height:150px;">
     <div class="card-body">
       <h5 class="card-title text-capitalize">{{ name }}</h5>
@@ -24,7 +24,7 @@
       </button>
       <router-link :to="`/pokemon/${id}`" class="btn btn-outline-success btn-sm">Ver detalle</router-link>
     </div>
-  </div>
+  </article>
 </template>
 
 <script setup>
@@ -41,3 +41,52 @@ const props = defineProps({
   }
 })
 </script>
+
+<style scoped>
+.card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-img-top {
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: white !important;
+}
+
+.btn-outline-success:hover {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  color: white !important;
+}
+
+/* Add a subtle glow effect to favorite button when it's a favorite */
+.btn-outline-danger:disabled {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: white !important;
+  opacity: 0.8;
+}
+</style>
