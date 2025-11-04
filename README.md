@@ -1,29 +1,10 @@
-# M6AE5-ABPRO5
+# M6AE5-ABPRO5 - PORTAFOLIO
 
-This template should help get you started developing with Vue 3 in Vite.
+He actualizado este proyecto para utilizarlo como proyecto de portafolio.
 
-## Recommended IDE Setup
+Para ello, he agregado una nueva vista de Login para permitir que solamente los usuarios autorizados puedan acceder al `/home`. Además, he vinculado el proyecto con Firebase para usar sus servicios de Hosting y Auth. Algunas capturas:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+![captura1](./captura1.png)
 
-## Customize configuration
+![captura2](./captura2.png)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
